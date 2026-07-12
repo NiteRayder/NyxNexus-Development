@@ -1,0 +1,294 @@
+/* =========================
+   NyxNexus Development
+   Main Stylesheet
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* Colors */
+
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #111111;
+    --bg-hover: #181818;
+
+    --border-color: #252525;
+
+    --accent: #9b5cff;
+    --accent-hover: #b47cff;
+    --accent-active: #c99cff;
+
+    --text-primary: #ffffff;
+    --text-secondary: #b5b5b5;
+    --text-muted: #7a7a7a;
+
+    /* Effects */
+
+    --shadow:
+        0 8px 30px rgba(0,0,0,.45);
+
+    --glow:
+        0 0 25px rgba(155,92,255,.18);
+
+    --transition:
+        0.25s ease;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+
+    font-family:
+        "Segoe UI",
+        "Inter",
+        sans-serif;
+
+    min-height: 100vh;
+}
+
+/* =========================
+   Header
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+
+    background: rgba(0,0,0,.85);
+
+    backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid var(--border-color);
+
+    padding: 20px 40px;
+
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+/* =========================
+   Navigation
+========================= */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--text-secondary);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--text-primary);
+}
+
+/* =========================
+   Main Content
+========================= */
+
+main {
+    max-width: 1400px;
+    margin: auto;
+    padding: 80px 40px;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+    text-align: center;
+
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    color: var(--text-secondary);
+
+    font-size: 1.3rem;
+
+    max-width: 800px;
+
+    margin: auto;
+
+    line-height: 1.7;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 14px 32px;
+
+    border-radius: 14px;
+
+    background: var(--accent);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.button:hover {
+    background: var(--accent-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--glow);
+}
+
+/* =========================
+   Cards
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 30px;
+}
+
+.card {
+    background: var(--bg-tertiary);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    background: var(--bg-hover);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        var(--shadow),
+        var(--glow);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+
+    color: var(--accent);
+}
+
+.card p {
+    color: var(--text-secondary);
+
+    line-height: 1.7;
+}
+
+/* =========================
+   Sections
+========================= */
+
+section {
+    margin-bottom: 100px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    border-top: 1px solid var(--border-color);
+
+    padding: 40px;
+
+    text-align: center;
+
+    color: var(--text-muted);
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 900px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    main {
+        padding: 60px 20px;
+    }
+
+}
