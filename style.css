@@ -325,3 +325,17 @@ footer {
     background: rgba(150, 150, 150, .15);
     color: #aaaaaa;
 }
+.card,
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.card.show,
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
