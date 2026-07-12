@@ -292,3 +292,36 @@ footer {
     }
 
 }
+.status {
+    display: inline-block;
+
+    padding: 6px 14px;
+
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.active {
+    background: rgba(88, 255, 155, .15);
+    color: #58ff9b;
+}
+
+.concept {
+    background: rgba(255, 190, 88, .15);
+    color: #ffbe58;
+}
+
+.paused {
+    background: rgba(255, 88, 88, .15);
+    color: #ff5858;
+}
+
+.archived {
+    background: rgba(150, 150, 150, .15);
+    color: #aaaaaa;
+}
